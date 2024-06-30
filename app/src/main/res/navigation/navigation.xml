@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.yash.opttera2.onBoarding.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_viewpager"
+            app:destination="@id/viewpager" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewpager"
+        android:name="com.yash.opttera2.onBoarding.Viewpager"
+        android:label="fragment_viewpager"
+        tools:layout="@layout/fragment_viewpager" >
+        <action
+            android:id="@+id/action_viewpager_to_logIN"
+            app:destination="@id/logIN" />
+    </fragment>
+    <fragment
+        android:id="@+id/logIN"
+        android:name="com.yash.opttera2.LogIN"
+        android:label="fragment_log_i_n"
+        tools:layout="@layout/fragment_log_i_n" >
+        <action
+            android:id="@+id/action_logIN_to_signUp"
+            app:destination="@id/signUp" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.yash.opttera2.SignUp"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUp_to_logIN"
+            app:destination="@id/logIN" />
+        <action
+            android:id="@+id/action_signUp_to_signUpConfirm"
+            app:destination="@id/signUpConfirm" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpConfirm"
+        android:name="com.yash.opttera2.SignUpConfirm"
+        android:label="fragment_sign_up_confirm"
+        tools:layout="@layout/fragment_sign_up_confirm" >
+        <action
+            android:id="@+id/action_signUpConfirm_to_logIN"
+            app:destination="@id/logIN" />
+        <action
+            android:id="@+id/action_signUpConfirm_to_signUp"
+            app:destination="@id/signUp" />
+        <action
+            android:id="@+id/action_signUpConfirm_to_logIN2"
+            app:destination="@id/logIN" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPassword"
+        android:name="com.yash.opttera2.ForgotPassword"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" />
+</navigation>
